@@ -44,7 +44,7 @@ export default function PrivacyPolicyPage() {
                     </p>
                     <h3 className="text-xl font-medium mb-2">Map Services (for Location QR Codes):</h3>
                     <p className="mb-4">
-                        When you use the location QR code feature, we use OpenStreetMap's Nominatim service for address geocoding. This service may log IP addresses and search queries according to their own privacy policy.
+                        When you use the location QR code feature, we use OpenStreetMap&apos;s Nominatim service for address geocoding. This service may log IP addresses and search queries according to their own privacy policy.
                     </p>
                     <h3 className="text-xl font-medium mb-2">Font Services:</h3>
                     <p className="mb-4">
@@ -55,7 +55,7 @@ export default function PrivacyPolicyPage() {
                 <section className="mb-8">
                     <h2 className="text-2xl font-semibold mb-4">4. Data Security</h2>
                     <p className="mb-4">
-                        Since we don't collect or store any of your data, there is no risk of your QR code data being compromised through our service. All processing happens locally in your browser.
+                        Since we don&apos;t collect or store any of your data, there is no risk of your QR code data being compromised through our service. All processing happens locally in your browser.
                     </p>
                 </section>
 
@@ -68,30 +68,30 @@ export default function PrivacyPolicyPage() {
                 </section>
 
                 <section className="mb-8">
-                    <h2 className="text-2xl font-semibold mb-4">6. Children's Privacy</h2>
+                    <h2 className="text-2xl font-semibold mb-4">6. Childrens Privacy</h2>
                     <p className="mb-4">
-                        Our service does not collect any personal information from anyone, including children under 13. Since we don't collect any data, there are no special considerations needed for children's privacy.
+                        Our service does not collect any personal information from anyone, including children under 13. Since we don&apos;t collect any data, there are no special considerations needed for children&apos;s privacy.
                     </p>
                 </section>
 
                 <section className="mb-8">
                     <h2 className="text-2xl font-semibold mb-4">7. Changes to This Privacy Policy</h2>
                     <p className="mb-4">
-                        We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+                        We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date.
                     </p>
                 </section>
 
                 <section className="mb-8">
                     <h2 className="text-2xl font-semibold mb-4">8. International Users</h2>
                     <p className="mb-4">
-                        Since our service processes all data locally in your browser and doesn't transmit personal data to our servers, there are no international data transfer concerns.
+                        Since our service processes all data locally in your browser and doesn&apos;t transmit personal data to our servers, there are no international data transfer concerns.
                     </p>
                 </section>
 
                 <section className="mb-8">
                     <h2 className="text-2xl font-semibold mb-4">9. Your Rights</h2>
                     <p className="mb-4">
-                        Since we don't collect or store your personal data, there is no data for you to access, update, or delete from our systems. You have complete control over your data as it never leaves your device.
+                        Since we don&apos;t collect or store your personal data, there is no data for you to access, update, or delete from our systems. You have complete control over your data as it never leaves your device.
                     </p>
                 </section>
             </div>

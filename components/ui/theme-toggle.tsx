@@ -21,7 +21,7 @@ export default function ThemeToggle() {
         if (storedTheme) {
             setTheme(storedTheme);
         }
-    }, []);
+    }, [setTheme]);
 
     if (!mounted) {
         return (

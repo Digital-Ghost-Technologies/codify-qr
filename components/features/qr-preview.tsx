@@ -4,7 +4,7 @@ import { useDebounce } from "@/hooks/use-debounce";
 import { QrCodeData, QrCodeOptions } from "@/types/qr";
 import { Copy, Download, Eye, Image as ImageIcon } from "lucide-react";
 import QRCodeStyling from "qr-code-styling";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { toast } from "sonner";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
@@ -131,9 +131,9 @@ export function QrPreview({ data, options }: QrPreviewProps) {
     };
 
     // Safe color that falls back to default if invalid
-    const safeColor = (color: string, fallback: string): string => {
+    const safeColor = useCallback((color: string, fallback: string): string => {
         return isValidHex(color) ? color : fallback;
-    };
+    }, []);
 
     // Force clear all QR-related DOM elements
     const forceCleanContainer = () => {
@@ -253,12 +253,28 @@ export function QrPreview({ data, options }: QrPreviewProps) {
         } finally {
             setIsGenerating(false);
         }
-    }, [effectiveData, options]);
+    }, [effectiveData, options, safeColor]);
 
     // Cleanup on unmount
     useEffect(() => {
+        const currentRef = ref.current;
         return () => {
-            forceCleanContainer();
+            if (currentRef) {
+                // Remove all SVG elements specifically
+                const svgs = currentRef.querySelectorAll('svg');
+                svgs.forEach(svg => svg.remove());
+                
+                // Remove all canvas elements
+                const canvases = currentRef.querySelectorAll('canvas');
+                canvases.forEach(canvas => canvas.remove());
+                
+                // Clear all children
+                while (currentRef.firstChild) {
+                    currentRef.removeChild(currentRef.firstChild);
+                }
+                
+                currentRef.innerHTML = '';
+            }
             qrCode.current = null;
         };
     }, []);
