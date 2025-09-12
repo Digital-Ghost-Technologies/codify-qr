@@ -36,7 +36,7 @@ export function TypeSelector({ selectedType, onTypeChange }: TypeSelectorProps) 
                             key={type}
                             onClick={() => onTypeChange(type)}
                             variant={selectedType === type ? "default" : "ghost"}
-                            className="cursor-pointer"
+                            className="cursor-pointer type-select-button"
                         >
                             <Icon className="w-4 h-4" />
                             <span>{label}</span>
